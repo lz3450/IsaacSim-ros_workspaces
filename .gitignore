@@ -9,3 +9,8 @@ build_ws/humble
 .vscode/
 **/.*.pyc
 __pycache__/
+
+###
+jazzy_ws/dep-pkgs.txt
+jazzy_ws/dep-pkgs-to-install.txt
+jazzy_ws/isaacsim_ros2_jazzy_backup.tar.zst
