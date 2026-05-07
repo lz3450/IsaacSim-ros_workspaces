@@ -11,7 +11,7 @@ build_ws/humble
 __pycache__/
 
 ###
+*.tar*
 .cache/
 jazzy_ws/dep-pkgs.txt
 jazzy_ws/dep-pkgs-to-install.txt
-jazzy_ws/isaacsim_ros2_jazzy_backup.tar.zst
