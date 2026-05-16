@@ -31,6 +31,7 @@ COMMON_OPTIONS=(
     --packages-skip-build-finished
     --cmake-args
     -Wno-dev
+    --no-warn-unused-cli
     "-DCMAKE_BUILD_TYPE=Release"
     "-DCMAKE_EXPORT_COMPILE_COMMANDS=ON"
 )
