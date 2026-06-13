@@ -70,7 +70,7 @@ def update_env_vars(version_to_remove, specified_path_to_remove, env_var_name):
     env_var_value = os.environ.get(env_var_name, "")
     new_env_var_value = []
     for path in env_var_value.split(os.pathsep):
-        if not version_to_remove in path and not path.startswith(specified_path_to_remove):
+        if version_to_remove not in path and not path.startswith(specified_path_to_remove):
             new_env_var_value.append(path)
     os.environ[env_var_name] = os.pathsep.join(new_env_var_value)
 
@@ -145,6 +145,7 @@ class IsaacSimLauncherNode(Node):
             # If custom Isaac Sim Installation folder not given, use the default path using version number provided.
             home_var = "USERPROFILE" if sys.platform == "win32" else "HOME"
             home_path = os.getenv(home_var)
+            assert home_path is not None
             if version_ge(args.version, "4.2.0") and not version_gt(args.version, "2021.2.0"):
                 if sys.platform == "win32":
                     filepath_root = os.path.join("C:", "isaacsim")
