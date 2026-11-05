@@ -14,8 +14,8 @@ umask 0022
 
 SCRIPT_DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
 
-. "$SCRIPT_DIR/../../ros2_ws/ros2_setup.sh"
-# . /opt/ros/jazzy/local_setup.bash
+# . "$SCRIPT_DIR/../../ros2_ws/ros2_setup.sh"
+. /opt/ros/jazzy/local_setup.bash
 
 ################################################################################
 
